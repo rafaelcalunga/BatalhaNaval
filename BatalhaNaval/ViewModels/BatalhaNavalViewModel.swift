@@ -27,6 +27,10 @@ class BatalhaNavalViewModel: ObservableObject {
         self.posicoes.filter({ $0.acerto == false }).count
     }
     
+    var barcos: Int {
+        self.posicoes.filter({ $0.valor % 5 == 0 }).count
+    }
+    
     func iniciarJogo() {
         self.posicoes = [Posicao]()
         self.disparos = 35

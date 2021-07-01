@@ -18,14 +18,4 @@ struct Posicao: Identifiable {
         }
         return " "
     }
-    
-    /*init(valor: Int) {
-        self.valor = valor
-        self.disparo = ""
-    }
-    
-    init(valor: Int, disparo: String) {
-        self.valor = valor
-        self.disparo = disparo
-    }*/
 }

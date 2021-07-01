@@ -16,7 +16,12 @@ struct BatalhaNavalView: View {
     var body: some View {
         NavigationView {
             VStack {
-                PlacarView(disparos: viewModel.disparos, acertos: viewModel.acertos, erros: viewModel.erros)
+                PlacarView(
+                    disparos: viewModel.disparos,
+                    acertos: viewModel.acertos,
+                    barcos: viewModel.barcos,
+                    erros: viewModel.erros
+                )
                 
                 ScrollView {
                     LazyVGrid(columns: gridItems, spacing: 10) {

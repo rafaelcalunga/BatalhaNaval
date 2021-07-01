@@ -11,14 +11,21 @@ struct PosicaoView: View {
     
     let posicao: Posicao
     
+    var backgroundColor: Color {
+        if let acerto = posicao.acerto {
+            return acerto ? Color.red.opacity(0.2) : Color.blue.opacity(0.2)
+        }
+        return Color(.secondarySystemBackground)
+    }
+    
     var body: some View {
+        
         Text("\(posicao.impressao)")
             .font(.title)
             .padding(5)
             .frame(maxWidth: .infinity, maxHeight: .infinity)
-            .background(Color(.secondarySystemBackground))
+            .background(backgroundColor)
             .cornerRadius(3)
-            .shadow(color: Color(.systemGray6), radius: 6, x: 0.0, y: 0.0)
     }
 }
 

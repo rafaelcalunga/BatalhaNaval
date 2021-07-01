@@ -8,18 +8,24 @@
 
 /* Begin PBXBuildFile section */
 		6DC056D0268E422100FFEBC5 /* BatalhaNavalApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DC056CF268E422100FFEBC5 /* BatalhaNavalApp.swift */; };
-		6DC056D2268E422100FFEBC5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DC056D1268E422100FFEBC5 /* ContentView.swift */; };
+		6DC056D2268E422100FFEBC5 /* BatalhaNavalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DC056D1268E422100FFEBC5 /* BatalhaNavalView.swift */; };
 		6DC056D4268E422500FFEBC5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6DC056D3268E422500FFEBC5 /* Assets.xcassets */; };
 		6DC056D7268E422500FFEBC5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6DC056D6268E422500FFEBC5 /* Preview Assets.xcassets */; };
+		6DC056E2268E475000FFEBC5 /* Posicao.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DC056E1268E475000FFEBC5 /* Posicao.swift */; };
+		6DC056E4268E475D00FFEBC5 /* BatalhaNavalViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DC056E3268E475D00FFEBC5 /* BatalhaNavalViewModel.swift */; };
+		6DC056E6268E480800FFEBC5 /* PosicaoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DC056E5268E480800FFEBC5 /* PosicaoView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		6DC056CC268E422100FFEBC5 /* BatalhaNaval.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BatalhaNaval.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6DC056CF268E422100FFEBC5 /* BatalhaNavalApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BatalhaNavalApp.swift; sourceTree = "<group>"; };
-		6DC056D1268E422100FFEBC5 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		6DC056D1268E422100FFEBC5 /* BatalhaNavalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BatalhaNavalView.swift; sourceTree = "<group>"; };
 		6DC056D3268E422500FFEBC5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6DC056D6268E422500FFEBC5 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		6DC056D8268E422500FFEBC5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6DC056E1268E475000FFEBC5 /* Posicao.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Posicao.swift; sourceTree = "<group>"; };
+		6DC056E3268E475D00FFEBC5 /* BatalhaNavalViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BatalhaNavalViewModel.swift; sourceTree = "<group>"; };
+		6DC056E5268E480800FFEBC5 /* PosicaoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PosicaoView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,7 +59,9 @@
 			isa = PBXGroup;
 			children = (
 				6DC056CF268E422100FFEBC5 /* BatalhaNavalApp.swift */,
-				6DC056D1268E422100FFEBC5 /* ContentView.swift */,
+				6DC056E0268E474600FFEBC5 /* Models */,
+				6DC056DF268E473C00FFEBC5 /* ViewModels */,
+				6DC056DE268E472D00FFEBC5 /* Views */,
 				6DC056D3268E422500FFEBC5 /* Assets.xcassets */,
 				6DC056D8268E422500FFEBC5 /* Info.plist */,
 				6DC056D5268E422500FFEBC5 /* Preview Content */,
@@ -67,6 +75,31 @@
 				6DC056D6268E422500FFEBC5 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		6DC056DE268E472D00FFEBC5 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				6DC056D1268E422100FFEBC5 /* BatalhaNavalView.swift */,
+				6DC056E5268E480800FFEBC5 /* PosicaoView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		6DC056DF268E473C00FFEBC5 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				6DC056E3268E475D00FFEBC5 /* BatalhaNavalViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		6DC056E0268E474600FFEBC5 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				6DC056E1268E475000FFEBC5 /* Posicao.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,8 +171,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6DC056D2268E422100FFEBC5 /* ContentView.swift in Sources */,
+				6DC056D2268E422100FFEBC5 /* BatalhaNavalView.swift in Sources */,
+				6DC056E4268E475D00FFEBC5 /* BatalhaNavalViewModel.swift in Sources */,
 				6DC056D0268E422100FFEBC5 /* BatalhaNavalApp.swift in Sources */,
+				6DC056E2268E475000FFEBC5 /* Posicao.swift in Sources */,
+				6DC056E6268E480800FFEBC5 /* PosicaoView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

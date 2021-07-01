@@ -31,17 +31,21 @@ class BatalhaNavalViewModel: ObservableObject {
         self.posicoes = [Posicao]()
         self.disparos = 35
         
-        for i in 1...21 {
-            self.posicoes.append(Posicao.init(valor: i, acerto: nil))
+        for _ in 1...49 {
+            let random = Int.random(in: 1...99)
+            let posicao = Posicao(valor: random, acerto: nil)
+            
+            self.posicoes.append(posicao)
         }
     }
     
     func disparar(na posicao: Posicao) {
         if let index = posicoes.firstIndex(where: { $0.id == posicao.id }) {
+            guard self.posicoes[index].acerto == nil else { return }
+            
             self.posicoes[index].acerto = posicao.valor % 5 == 0
+            self.disparos -= 1
         }
-        
-        self.disparos -= 1
     }
     
 }

@@ -14,9 +14,9 @@ struct Posicao: Identifiable {
     
     var impressao: String {
         if let acerto = acerto {
-            return acerto ? "⛵️" : "💥"
+            return acerto ? "⛵️" : "💦"
         }
-        return ""
+        return " "
     }
     
     /*init(valor: Int) {

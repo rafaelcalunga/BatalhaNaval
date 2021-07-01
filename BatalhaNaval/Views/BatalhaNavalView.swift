@@ -16,14 +16,10 @@ struct BatalhaNavalView: View {
     var body: some View {
         NavigationView {
             VStack {
-                HStack() {
-                    Text("💣: \(viewModel.disparos)")
-                    Text("⛵️: \(viewModel.acertos)")
-                    Text("💥: \(viewModel.erros)")
-                }
+                PlacarView(disparos: viewModel.disparos, acertos: viewModel.acertos, erros: viewModel.erros)
                 
                 ScrollView {
-                    LazyVGrid(columns: gridItems) {
+                    LazyVGrid(columns: gridItems, spacing: 10) {
                         ForEach(viewModel.posicoes) { posicao in
                             PosicaoView(posicao: posicao)
                                 .onTapGesture {

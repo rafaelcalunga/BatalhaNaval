@@ -13,13 +13,12 @@ struct PosicaoView: View {
     
     var backgroundColor: Color {
         if let acerto = posicao.acerto {
-            return acerto ? Color.red.opacity(0.2) : Color.blue.opacity(0.2)
+            return acerto ? Color.ligthRed : Color.ligthBlue
         }
-        return Color(.secondarySystemBackground)
+        return Color.ligthGray
     }
     
     var body: some View {
-        
         Text("\(posicao.impressao)")
             .font(.title)
             .padding(5)
@@ -32,9 +31,12 @@ struct PosicaoView: View {
 struct PosicaoView_Previews: PreviewProvider {
     static var previews: some View {
         PosicaoView(posicao: Posicao(valor: 4))
+            .previewLayout(.fixed(width: 100, height: 100))
         
         PosicaoView(posicao: Posicao(valor: 4, acerto: true))
+            .previewLayout(.fixed(width: 100, height: 100))
         
         PosicaoView(posicao: Posicao(valor: 4, acerto: false))
+            .previewLayout(.fixed(width: 100, height: 100))
     }
 }

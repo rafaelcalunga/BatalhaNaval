@@ -16,9 +16,9 @@ struct PlacarView: View {
     
     var body: some View {
         HStack(spacing: 35) {
-            Text("💣 \(disparos)")
-            Text("⛵️ \(acertos) de \(barcos)")
-            Text("💦 \(erros)")
+            Text("\(Symbol.bomb) \(disparos)")
+            Text("\(Symbol.boat) \(acertos) de \(barcos)")
+            Text("\(Symbol.water) \(erros)")
         }
         .frame(minWidth: 0, maxWidth: .infinity)
         .padding()
@@ -30,5 +30,6 @@ struct PlacarView: View {
 struct PlacarView_Previews: PreviewProvider {
     static var previews: some View {
         PlacarView(disparos: 10, acertos: 2, barcos: 10, erros: 3)
+            .previewLayout(.sizeThatFits)
     }
 }
